@@ -10,3 +10,6 @@ document.getElementById("placeholder").addEventListener("onclick", function () {
     })
     console.log(words2.toString());
 })
+document.addEventListener("DOMContentLoaded", function (event) {
+
+});
