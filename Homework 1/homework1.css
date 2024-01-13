@@ -1,5 +1,13 @@
 body {
     margin: 50px;
+}
+.textbox1 {
     font-family: Helvetica, sans-serif;
     font-size: 150%;
+    color: blue;
+}
+.textbox2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+    color: red;
 }
