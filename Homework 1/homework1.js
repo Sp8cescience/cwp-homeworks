@@ -1,4 +1,4 @@
-let words = new string[3];
+let words = string[3];
 for (i = 0; i < length(words) - 1; i++) {
     words[i] = prompt("Please enter a word, any word.", "Type your response here.");
     document.getElementById("myTextBox" + i).log(words[i]);
