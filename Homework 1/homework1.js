@@ -13,3 +13,6 @@ document.getElementById("placeholder").addEventListener("onclick", function () {
 document.addEventListener("DOMContentLoaded", function (event) {
 
 });
+   function transformWords() {
+        // Your code here
+    }
