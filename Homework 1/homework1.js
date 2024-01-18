@@ -1,16 +1,49 @@
-let words = [3];
-for (i = 0; i < words.length - 1; i++) {
-    words[i] = prompt("Please enter a word, any word.", "Type your response here.");
-    document.getElementById("myTextBox" + i).value = words[i];
+// Array for storing user-entered words
+let words = [];
+
+// Get DOM elements
+const inputForm = document.getElementById('inputForm');
+const wordList = document.getElementById('wordList');
+const transformedList = document.getElementById('transformedList');
+const submitButton = document.getElementById('submitButton');
+const page1 = document.getElementById('page1');
+const page2 = document.getElementById('page2');
+
+// Display words on page 1
+function displayWords() {
+  wordList.innerHTML = '';
+  words.forEach(word => {
+    const li = document.createElement('li');
+    li.textContent = word;
+    wordList.appendChild(li);
+  });
 }
-document.getElementById("submitb").style.visibility="visible";
-document.getElementById("submitb").addEventListener("onclick", function () {
-    document.getElementById("textbox1").style.visbility="hidden";
-    document.getElementById("textbox2").style.visibilty="visible";
-    let words2 = words.map(function (word) { 
-        return word[word.length - 1] + word.substring(1, (word.length - 2)) + word[0];
-    })
-    document.getElementById("myTextBox4").value = words2[0];
-    document.getElementById("myTextBox5").value = words2[1];
-    document.getElementById("myTextBox6").value = words2[2];
-})
+
+// Transform words and display on page 2
+function transformWords() {
+  const transformedWords = words.map(word => {
+    return word.charAt(word.length - 1) + word.substring(1, word.length - 1) + word.charAt(0);
+  });
+
+  transformedList.innerHTML = '';
+  transformedWords.forEach(word => {
+    const li = document.createElement('li');
+    li.textContent = word;
+    transformedList.appendChild(li);
+  });
+}
+
+// Event listener for form submission
+submitButton.addEventListener('click', () => {
+  const word1 = document.getElementById('word1').value;
+  const word2 = document.getElementById('word2').value;
+  const word3 = document.getElementById('word3').value;
+
+  words = [word1, word2, word3];
+  displayWords();
+  transformWords();
+
+  // Swap pages
+  page1.style.display = 'none';
+  page2.style.display = 'block';
+});

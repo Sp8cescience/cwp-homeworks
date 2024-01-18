@@ -1,25 +1,33 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>starter code</title>
-<link rel="stylesheet" type="text/css" href="homework1.css">
+<link rel="stylesheet" type="text/css" href="homework1.css"
 </head>
 <body>
-<h2>Starter Project</h2>
-<ul class="textbox1">
-    <li><input type="text" id="myTextBox1" name="myTextBox1" placeholder="Enter text here"></li>
-    <li><input type="text" id="myTextBox2" name="myTextBox2" placeholder="Enter text here"></li>
-    <li><input type="text" id="myTextBox3" name="myTextBox3" placeholder="Enter text here"></li>
-</ul>
- <button type="button" hidden id="submitb">Transform Words</button>
-<ul class="textbox2" hidden>
-    <li><input type="text" id="myTextBox4" name="myTextBox4" placeholder="Enter text here"></li>
-    <li><input type="text" id="myTextBox5" name="myTextBox5" placeholder="Enter text here"></li>
-    <li><input type="text" id="myTextBox6" name="myTextBox6" placeholder="Enter text here"></li>
-</ul>
+  <section id="page1">
+    <h1>Page 1</h1>
+    <form id="inputForm">
+      <label for="word1">Word 1:</label>
+      <input type="text" id="word1" required autofocus><br>
 
+      <label for="word2">Word 2:</label>
+      <input type="text" id="word2" required><br>
+
+      <label for="word3">Word 3:</label>
+      <input type="text" id="word3" required><br>
+
+      <button type="button" id="submitButton">Submit</button>
+    </form>
+
+    <h2>Words:</h2>
+    <ul id="wordList"></ul>
+  </section>
+
+  <section id="page2">
+    <h1>Page 2</h1>
+    <h2>Transformed Words:</h2>
+    <ul id="transformedList"></ul>
+  </section>
 <script src="homework1.js"></script>
 </body>
 </html>
